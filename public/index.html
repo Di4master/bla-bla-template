@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d1b221ac-7844-4d59-bda7-e41e7b798b0d&lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header" id="top">
+        <div class="header__navbar container d-flex flex-column flex-md-row align-items-center">
+            <div class="logo d-flex my-0 mr-md-auto">
+                <div class="logo__image"></div>
+                <div class="ml-3 d-flex flex-column justify-content-center">
+                    <div class="logo__title font-weight-bold">BLA BLA</div>
+                    <div>One Page Flat Template</div>
+                </div>
+            </div>
+            <nav class="nav mt-3 mr-md-3 mt-md-0">
+                <a class="button nav-link btn-outline-primary" href="#top">HOME</a>
+                <a class="button nav-link btn-outline-primary" href="#portfolio">PORTFOLIO</a>
+                <a class="button nav-link btn-outline-primary" href="#about">ABOUT</a>
+                <a class="button nav-link btn-outline-primary" href="#contact">CONTACT</a>
+            </nav>
+        </div>
+        <div class="jumbo">
+            <div class="container d-flex justify-content-center">
+                <div class="jumbo__caption px-2 text-center">
+                    <h1 class="display-4 my-4">We Build <b>Brand</b></h1>
+                    <div class="lead my-4 text-white-50">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </div>
+                    <a class="button btn btn-primary my-4" href="#about">LEARN MORE</a>
+                    <div class="my-4">
+                        <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="portfolio">
+            <div class="portfolio container">
+                <div class="section-title pt-5 pb-4">
+                    <h3>Portfolio</h3>
+                    <div class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                </div>
+                <div class="portfolio__filters">
+                    <button class="portfolio__filter-btn button btn btn-primary" data-filter="all">ALL</button>
+                    <button class="portfolio__filter-btn button btn btn-primary" data-filter=".category-web">WEB DESIGN</button>
+                    <button class="portfolio__filter-btn button btn btn-primary" data-filter=".category-graphic">GRAPHIC DESIGN</button>
+                    <button class="portfolio__filter-btn button btn btn-primary" data-filter=".category-flat">FLAT DESIGN</button>
+                </div>
+                <div class="portfolio__items row">
+                    <div class="portfolio__item img1 col-6 col-md-4 col-lg-3 mix category-web"></div>
+                    <div class="portfolio__item img2 col-6 col-md-4 col-lg-3 mix category-web"></div>
+                    <div class="portfolio__item img3 col-6 col-md-4 col-lg-3 mix category-graphic"></div>
+                    <div class="portfolio__item img4 col-6 col-md-4 col-lg-3 mix category-flat"></div>
+                    <div class="portfolio__item img5 col-6 col-md-4 col-lg-3 mix category-graphic"></div>
+                    <div class="portfolio__item img6 col-6 col-md-4 col-lg-3 mix category-flat"></div>
+                    <div class="portfolio__item img1 col-6 col-md-4 col-lg-3 mix category-web category-flat"></div>
+                    <div class="portfolio__item img2 col-6 col-md-4 col-lg-3 mix category-web category-graphic"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-secondary" id="about">
+            <div class="about-us container">
+                <div class="section-title pt-5 pb-4 text-white">
+                    <h3>About us</h3>
+                    <div class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="person-card col p-0">
+                        <div class="person-card__avatar ava1">
+                            <div class="person-card__social">
+                                <a class="fa fa-facebook" aria-hidden="true"></a>
+                                <a class="fa fa-twitter" aria-hidden="true"></a>
+                                <a class="fa fa-google-plus" aria-hidden="true"></a>
+                                <a class="fa fa-dribbble" aria-hidden="true"></a>
+                            </div>
+                        </div>
+
+                        <div class="person-card__description">
+                            <div class="person-card__title">
+                                <div class="person-card__title-name">Melannie Doe</div>
+                                <div class="person-card__title-position">Project Manager</div>
+                            </div>
+                            <div class="person-card__info">
+                                Ut wisi enim ad minim veniam,
+                                quis nostrud exerci tation
+                            </div>
+                        </div>
+                    </div>
+                    <div class="person-card col p-0">
+                        <div class="person-card__avatar ava3">
+                            <div class="person-card__social">
+                                <a class="fa fa-facebook" aria-hidden="true"></a>
+                                <a class="fa fa-twitter" aria-hidden="true"></a>
+                                <a class="fa fa-google-plus" aria-hidden="true"></a>
+                                <a class="fa fa-dribbble" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="person-card__description">
+                            <div class="person-card__title">
+                                <div class="person-card__title-name">Jhonnie Doe</div>
+                                <div class="person-card__title-position">Graphic Designer</div>
+                            </div>
+                            <div class="person-card__info">
+                                Ut wisi enim ad minim veniam,
+                                quis nostrud exerci tation
+                                ullamcorper suscipit lobortis nisl
+                                ut aliquip ex ea commodo
+                                consequat.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="person-card col p-0">
+                        <div class="person-card__avatar ava2">
+                            <div class="person-card__social">
+                                <a class="fa fa-facebook" aria-hidden="true"></a>
+                                <a class="fa fa-twitter" aria-hidden="true"></a>
+                                <a class="fa fa-google-plus" aria-hidden="true"></a>
+                                <a class="fa fa-dribbble" aria-hidden="true"></a>
+                            </div>
+                        </div>
+                        <div class="person-card__description">
+                            <div class="person-card__title">
+                                <div class="person-card__title-name">Daniel Doe</div>
+                                <div class="person-card__title-position">Web Designer</div>
+                            </div>
+                            <div class="person-card__info">
+                                Ut wisi enim ad minim veniam,
+                                quis nostrud exerci tation
+                                ullamcorper suscipit lobortis nisl
+                                ut aliquip ex ea commodo                                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray" id="contact">
+            <div class="contact-us container">
+                <div class="section-title text-center pt-5 pb-4">
+                    <h3>Contact us</h3>
+                    <div class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                </div>
+                <div class="row">
+                    <div class="form col-12 col-md-6">
+                        <form>
+                            <div class="row mt-4">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="inputName" placeholder="Your name">
+                                </div>
+                                <div class="col-6">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Your email">
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <textarea id="exampleTextarea" rows="7" placeholder="Your message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-4 text-right">
+                                <div class="col ml-auto">
+                                    <button type="submit" class="button btn btn-primary">SUBMIT</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="mt-3 mb-2">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Bla Bla Company 125009 Moscow, Red Square 1
+                        </p>
+                        <div class="map" id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="d-flex align-items-center py-4 container">
+            <div class="mr-auto">
+                © Copyright 2019 Bla Bla Studio &nbsp|&nbsp One Page Flat Template
+            </div>
+            <a class="button btn btn-primary" href="#top">
+                <i class="fa fa-chevron-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

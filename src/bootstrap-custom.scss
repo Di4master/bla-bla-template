@@ -1,0 +1,20 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px
+);
+$grid-gutter-width: 20px;
+
+$enable-rounded: false;
+$font-family-sans-serif: Lato;
+$line-height-base: 1.2;
+$body-color: #444;
+
+$theme-colors: (
+  "primary": #1bbc9b,
+  "secondary": #16a086,
+  "gray": #ecf0f1
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

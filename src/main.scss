@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+@mixin bg-image($image-path, $width, $height, $size:contain) {
+  background: url($image-path) no-repeat center / $size;
+  width: $width;
+  height: $height;
+}
+
+html, body {
+  font-size: 14px;
+}
+
+.section-title {
+  text-align: center;
+
+  h3 {
+    font-size: 28px;
+  }
+  .lead {
+    font-size: 16px;
+  }
+}
+
+button.button,
+a.button {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.header {
+
+  &__navbar {
+    padding-top: 26px;
+    padding-bottom: 22px;
+  }
+}
+
+.logo {
+
+  &__image {
+    @include bg-image('./images/b-logo.png', 49px, 47px);
+  }
+  &__title {
+    font-size: 20px;
+  }
+}
+
+.nav {
+  a {
+    color: #444;
+    letter-spacing: initial;
+  }
+}
+
+.jumbo {
+  background: url(./images/jumbotron.png) no-repeat center / cover;
+  color: white;
+
+  &__caption {
+    max-width: 600px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  .lead {
+    font-size: 18px;
+  }
+  .fa-chevron-circle-down {
+    font-size: 50px;
+  }
+}
+
+.portfolio {
+  padding-bottom: 42px;
+  text-align: center;
+
+  &__filters {
+    padding: 4px 0 17px;
+  }
+  &__filter-btn{
+    margin: 10px 7.5px;
+  }
+  &__item {
+    margin: 18px 0;
+    position: relative;
+    cursor: pointer;
+  }
+  &__item:hover::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(22, 160, 135, 0.75);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  &__item:hover::after {
+    content: '\1F50D';
+    position: absolute;
+    background-color: rgba(68, 68, 68, 0.612);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+  }
+
+  .img1 { @include bg-image('./images/img-1.png', 180px, 180px); }
+  .img2 { @include bg-image('./images/img-2.png', 180px, 180px); }
+  .img3 { @include bg-image('./images/img-3.png', 180px, 180px); }
+  .img4 { @include bg-image('./images/img-4.png', 180px, 180px); }
+  .img5 { @include bg-image('./images/img-5.png', 180px, 180px); }
+  .img6 { @include bg-image('./images/img-6.png', 180px, 180px); }
+}
+
+
+.about-us {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.person-card {
+  margin: 25px 4%;
+  background-color: white;
+  max-width: 220px;
+
+  &__avatar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__avatar:hover > &__social {
+    opacity: 100;
+  }
+  &__social {
+    position: absolute;
+    background-color: rgba(22, 160, 135, 0.75);
+    color: white;
+    padding: 5px;
+    font-size: 29px;
+    opacity: 0;
+    transition: 0.25s ease-in;
+  }
+  &__social a {
+    padding: 5px 6px;
+    cursor: pointer;
+  }
+  &__social a:hover {
+    opacity: 0.5;
+  }
+  &__description {
+    background-color: white;
+    line-height: 1.429;
+  }
+  &__title {
+    padding-top: 20px;
+  }
+  &__title-name {
+    font-size: 18px;
+  }
+  &__title-position {
+    font-style: italic;
+  }
+  &__info {
+    padding: 22px 25px 20px 10px;
+    text-align: left;
+  }
+
+  .ava1 { @include bg-image('./images/ava-1.png', 220px, 228px); }
+  .ava2 { @include bg-image('./images/ava-2.png', 220px, 228px, cover); }
+  .ava3 { @include bg-image('./images/ava-3.png', 220px, 228px); }
+}
+
+.form {
+  textarea {
+    width: 100%;
+  }
+}
+
+.map {
+  min-height: 265px;
+  width: 100%;
+  background-color: #444;
+}
+
+.contact-us {
+  padding-bottom: 60px;
+}
+
+.form {
+
+  input,
+  textarea {
+    font-size: 14px;
+    line-height: 1.2;
+    font-style: italic;
+    padding: 20px 15px;
+    background-color: white;
+    color: #999999;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #bec3c7;
+  }
+  button {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+footer {
+  background-color: #2d3e50;
+  color: #f2f3f4;
+
+  .fa-chevron-up {
+    font-size: 20px;
+    padding-left: 2px;
+    padding-bottom: 3px;
+  }
+}
